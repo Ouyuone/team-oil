@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/common_oil/common_oil.iml" filepath="$PROJECT_DIR$/common_oil/common_oil.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order_oil/order_oil.iml" filepath="$PROJECT_DIR$/order_oil/order_oil.iml" />
+      <module fileurl="file://$PROJECT_DIR$/team_oil.iml" filepath="$PROJECT_DIR$/team_oil.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user_oil/user_oil.iml" filepath="$PROJECT_DIR$/user_oil/user_oil.iml" />
+    </modules>
+  </component>
+</project>
