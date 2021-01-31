@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: team_oil_gateway
+  profiles:
+    active: dev
+server:
+  port: 1653
+logging:
+  file:
+    name: logs/gateway_oil/gateway_oil.log

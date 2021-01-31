@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: team_oil_register
+  profiles:
+    active: dev
+  security:
+    user:
+      name: teamoil
+      password: teamoil
+server:
+  port: 1111
+logging:
+  file:
+    name: logs/register_oil/register_oil.log

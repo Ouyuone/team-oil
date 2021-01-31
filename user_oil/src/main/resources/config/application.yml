@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: team_oil_user
+  profiles:
+    active: dev
+server:
+  port: 1655
+logging:
+  file:
+    name: logs/user_oil/user_oil.log
+  level:
+    root: debug
+#    com.ouyu.tech.team_oil.user_oil.mapper: debug
+mybatis-plus:
+  type-aliases-package: com.ouyu.tech.team_oil.user_oil.entity
+  mapper-locations: classpath*://mapper/**/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+    map-underscore-to-camel-case: true

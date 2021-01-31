@@ -6,36 +6,31 @@
         <groupId>com.ouyu.tech</groupId>
         <artifactId>team_oil</artifactId>
         <version>1.0-SNAPSHOT</version>
+
     </parent>
     <groupId>com.ouyu.tech.team_oil</groupId>
-    <artifactId>common_oil</artifactId>
+    <artifactId>register_oil</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>common_oil</name>
-    <description>公共组件</description>
+    <name>register_oil</name>
+    <description>团油的注册服务</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <scope>runtime</scope>
-            <optional>true</optional>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.4.1</version>
-        </dependency>
+
     </dependencies>
 
-    <!--<build>
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
-    </build>-->
-
+    </build>
+s
 </project>
