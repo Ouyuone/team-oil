@@ -1,11 +1,9 @@
 package com.ouyu.tech.team_oil.user_oil.entity;
 
 import java.math.BigDecimal;
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.baomidou.mybatisplus.annotation.IdType;
+
+import com.baomidou.mybatisplus.annotation.*;
 import com.ouyu.tech.team_oil.common_oil.entity.BaseEntity;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableField;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -40,8 +38,12 @@ public class User extends BaseEntity {
     private String username;
 
     @ApiModelProperty(value = "密码")
-    @TableField("password")
+    @TableField(value = "password")
     private String password;
+
+    @ApiModelProperty("性别")
+    @TableField(value = "sex")
+    private String sex;
 
     @ApiModelProperty(value = "加盐")
     @TableField("salt")
@@ -55,7 +57,11 @@ public class User extends BaseEntity {
     @TableField("phone")
     private String phone;
 
-    @ApiModelProperty(value = "总积分")
+    @ApiModelProperty(value = "员工号")
+    @TableField("account_code")
+    private String accountCode;
+
+    @ApiModelProperty(value = "总积分",example = "0")
     @TableField("integral")
     private BigDecimal integral;
 

@@ -4,6 +4,9 @@ import com.ouyu.tech.team_oil.user_oil.entity.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * <p>
  * 用户表 Mapper 接口
@@ -14,4 +17,5 @@ import org.apache.ibatis.annotations.Mapper;
  */
 public interface UserMapper extends BaseMapper<User> {
 
+   Long addPlanUser(HashMap map);
 }

@@ -8,3 +8,11 @@ eureka:
   instance:
     instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
     prefer-ip-address: true
+#    Eureka 控制台快速查看 Swagger 文档
+    status-page-url: http://${spring.cloud.client.ip-address}:${server.port}/swagger-ui.html
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://39.108.90.8:3307/team_oil?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    password: root
+    username: root

@@ -3,7 +3,30 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://teamoil:teamoil@localhost:1111/eureka
+      defaultZone: http://teamoil:teamoil@localhost:1111/eureka/
   instance:
     instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
     prefer-ip-address: true
+spring:
+  redis:
+    host: 39.108.90.8
+    database: 5
+    port: 6379
+#    yml配置跨域
+#  cloud:
+#    gateway:
+#      globalcors:
+#        corsConfigurations:
+#          '[/**]':
+#              allowedOrigins: "*"
+#              exposedHeaders:
+#                - content-type
+#              allowedHeaders:
+#                - content-type
+#              allowCredentials: true
+#              allowedMethods:
+#                - GET
+#                - OPTIONS
+#                - PUT
+#                - DELETE
+#                - POST

@@ -1,0 +1,18 @@
+server:
+  port: 1652
+spring:
+  profiles:
+    active: dev
+  application:
+    name: team-oil-message
+logging:
+  file:
+    name: logs/message-oil/message-oil.log
+  level:
+    com.ouyu.tech.message_oil: debug
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  type-aliases-package: com.ouyu.tech.message_oil.entity
+  configuration:
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+    map-underscore-to-camel-case: true

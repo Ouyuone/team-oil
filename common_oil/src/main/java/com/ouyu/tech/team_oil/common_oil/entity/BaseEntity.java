@@ -23,14 +23,14 @@ import java.util.Date;
 public class BaseEntity {
 
     @TableField(fill = FieldFill.INSERT)
-    private Long createBy;
+    private Integer createBy;
 
 
     @TableField(fill = FieldFill.INSERT)
     private Date createTime;
 
     @TableField(fill = FieldFill.UPDATE)
-    private Long updateBy;
+    private Integer updateBy;
 
 
     @TableField(fill = FieldFill.UPDATE)

@@ -1,6 +1,6 @@
 spring:
   application:
-    name: team_oil_register
+    name: team-oil-register
   profiles:
     active: dev
   security:

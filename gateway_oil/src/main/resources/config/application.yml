@@ -1,8 +1,57 @@
 spring:
   application:
-    name: team_oil_gateway
+    name: team-oil-gateway
   profiles:
     active: dev
+  cloud:
+    gateway:
+#      此断言指向的是特殊身份登录者地址
+      routes:
+        - id: path_login_route
+          uri: lb://team-oil-user
+          predicates:
+           - Path=/user_oil/doLogin
+          filters:
+            - AddRequestHeader=X-Request-oil, Bar
+#          下面是使用的ip限流 可在key-resolver中el表达式改
+            - name: RequestRateLimiter
+              args:
+                #              允许用户每秒处理多少个请求。
+                redis-rate-limiter.replenishRate: 10
+                #              令牌桶的容量，允许在 1s 内完成的最大请求数。
+                redis-rate-limiter.burstCapacity: 20
+                #              使用 SpEL 按名称引用 bean。
+                key-resolver: "#{@ipKeyResolver}"
+#                访问对应url后可以在redis中查看   到一下两个key
+#               "request_rate_limiter.{192.168.1.1}.timestamp"
+#                "request_rate_limiter.{192.168.1.1}.tokens"
+#                timestamp：存储的是当前时间的秒数，也就是 System.currentTimeMillis()/1000 或者 Instant.now().getEpochSecond()。
+#                tokens：存储的是当前这秒钟对应的可用令牌数量
+#                key在redis中存活的时间是有一个算法 (capacity/rate)*2
+      discovery:
+        locator:
+#          开启本地服务名访问对应服务
+          enabled: true
+#          开启服务名小写访问（默认是大写服务名）
+          lower-case-service-id: true
+#      routes:
+#        - 有配置断言的先后顺序 写在前面的优先匹配 或者写order优先级
+#        - id: method_route
+#          uri: http://baidu.com
+#          predicates:
+#          - Method=GET
+#        - id: query_route
+#          uri: http://c.biancheng.net
+#          predicates:
+#            - Query=foo, ba.
+#       自定义predicate断言
+#        - id: consume
+#          uri: http://c.biancheng.net
+#          predicates:
+#            - Path=/ss
+#            - name: CheckAuth
+#              args:
+#                name: zhangsan
 server:
   port: 1653
 logging:
