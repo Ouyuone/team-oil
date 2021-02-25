@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/common_oil/common_oil.iml" filepath="$PROJECT_DIR$/common_oil/common_oil.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway_oil/gateway_oil.iml" filepath="$PROJECT_DIR$/gateway_oil/gateway_oil.iml" />
+      <module fileurl="file://$PROJECT_DIR$/message_oil/message_oil.iml" filepath="$PROJECT_DIR$/message_oil/message_oil.iml" />
       <module fileurl="file://$PROJECT_DIR$/order_oil/order_oil.iml" filepath="$PROJECT_DIR$/order_oil/order_oil.iml" />
+      <module fileurl="file://$PROJECT_DIR$/register_oil/register_oil.iml" filepath="$PROJECT_DIR$/register_oil/register_oil.iml" />
       <module fileurl="file://$PROJECT_DIR$/team_oil.iml" filepath="$PROJECT_DIR$/team_oil.iml" />
       <module fileurl="file://$PROJECT_DIR$/user_oil/user_oil.iml" filepath="$PROJECT_DIR$/user_oil/user_oil.iml" />
     </modules>

@@ -7,14 +7,19 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="common_oil" />
+        <module name="gateway_oil" />
+        <module name="message_oil" />
         <module name="order_oil" />
-        <module name="team_oil" />
+        <module name="register_oil" />
         <module name="user_oil" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="common_oil" target="1.8" />
+      <module name="gateway_oil" target="1.8" />
+      <module name="message_oil" target="1.8" />
       <module name="order_oil" target="1.8" />
+      <module name="register_oil" target="1.8" />
       <module name="team_oil" target="1.8" />
       <module name="user_oil" target="1.8" />
     </bytecodeTargetLevel>
@@ -22,7 +27,10 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="common_oil" options="-parameters" />
+      <module name="gateway_oil" options="-parameters" />
+      <module name="message_oil" options="-parameters" />
       <module name="order_oil" options="-parameters" />
+      <module name="register_oil" options="-parameters" />
       <module name="team_oil" options="-parameters" />
       <module name="user_oil" options="-parameters" />
     </option>
